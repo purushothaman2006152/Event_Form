@@ -1,129 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Event Registration Page</title>
-
+<title>Dynamic Event Registration</title>
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-<header>
-<h1>College Tech Workshop 2026</h1>
-<p>Learn modern web technologies and programming skills.</p>
-</header>
+<div class="container">
 
-<section class="event-info">
+<h1>Tech Innovators Workshop 2026</h1>
+
+<p class="desc">
+Welcome to the Tech Innovators Workshop 2026. This event focuses on AI,
+Cybersecurity and Web Development.
+</p>
 
 <h2>Event Information</h2>
 
 <table>
+<tr>
+<th>Event Date</th>
+<td>15 March 2026</td>
+</tr>
 
 <tr>
-<th>Date</th>
 <th>Time</th>
-<th>Venue</th>
-<th>Organizer</th>
+<td>10:00 AM – 4:00 PM</td>
 </tr>
 
 <tr>
-<td>20 April 2026</td>
-<td>10:00 AM</td>
-<td>SRM Arts and Science College</td>
-<td>Computer Science Department</td>
+<th>Venue</th>
+<td>SRM Arts and Science College Auditorium</td>
 </tr>
 
+<tr>
+<th>Organizer</th>
+<td>Department of Computer Science</td>
+</tr>
 </table>
 
-</section>
-
-
-<section class="form-section">
+<hr>
 
 <h2>Event Registration Form</h2>
 
-<form onsubmit="return validateForm()">
+<form id="registrationForm">
 
 <fieldset>
 <legend>Personal Information</legend>
 
-<label>Name</label>
-<input type="text" required>
+Name:
+<input type="text" id="name" required>
 
-<label>Email</label>
-<input type="email" required>
+Email:
+<input type="email" id="email" required>
 
-<label>Phone Number</label>
-<input type="tel" required>
+Phone:
+<input type="tel" id="phone" required>
 
-<label>Date of Birth</label>
-<input type="date">
+Date of Birth:
+<input type="date" required>
 
-<label>Gender</label>
-
-<input type="radio" name="gender"> Male
-<input type="radio" name="gender"> Female
-<input type="radio" name="gender"> Other
+Gender:
+<input type="radio" name="gender" value="Male" required> Male
+<input type="radio" name="gender" value="Female"> Female
+<input type="radio" name="gender" value="Other"> Other
 
 </fieldset>
-
 
 <fieldset>
 <legend>Event Selection</legend>
 
-<label>Select Event</label>
-
-<select>
-<option>Web Development Workshop</option>
-<option>Cyber Security Seminar</option>
-<option>Artificial Intelligence Talk</option>
+Select Event:
+<select id="event">
+<option>AI Workshop</option>
+<option>Cybersecurity Seminar</option>
+<option>Web Development Bootcamp</option>
 </select>
 
-<label>Mode of Participation</label>
-
-<input type="radio" name="mode"> Online
-<input type="radio" name="mode"> Offline
+Mode:
+<input type="radio" name="mode" value="Online" required> Online
+<input type="radio" name="mode" value="Offline"> Offline
 
 </fieldset>
-
 
 <fieldset>
 <legend>Additional Details</legend>
 
-<label>College / Company Name</label>
+College / Company:
 <input type="text">
 
-<label>Upload ID Proof</label>
+Upload ID:
 <input type="file">
 
-<label>Comments / Expectations</label>
+Comments:
 <textarea rows="4"></textarea>
 
 </fieldset>
 
-<label>
-<input type="checkbox" id="confirm">
+<input type="checkbox" id="confirm" required>
 I confirm that the above details are correct.
-</label>
 
 <br><br>
 
-<button type="submit">Submit</button>
-<button type="reset">Reset</button>
+<button type="submit" class="submit-btn">Submit</button>
+<button type="reset" class="reset-btn">Reset</button>
 
 </form>
-
-</section>
-
-
-<section>
 
 <h2>Registered Participants</h2>
 
 <table>
-
+<thead>
 <tr>
 <th>Name</th>
 <th>Email</th>
@@ -131,26 +119,19 @@ I confirm that the above details are correct.
 <th>Event</th>
 <th>Mode</th>
 </tr>
+</thead>
 
-<tr>
-<td>Rahul Kumar</td>
-<td>rahul@email.com</td>
-<td>9876543210</td>
-<td>Web Development Workshop</td>
-<td>Offline</td>
-</tr>
+<tbody id="participantsTable">
+</tbody>
 
 </table>
 
-</section>
-
 <footer>
-
-<p>Contact Email: events@college.com</p>
-<p>Help Desk: +91 9876543210</p>
-<p>© 2026 Department of Computer Science</p>
-
+Contact: techworkshop@gmail.com | Help Desk: +91 9876543210 <br>
+© 2026 Tech Innovators Workshop
 </footer>
+
+</div>
 
 <script src="script.js"></script>
 
