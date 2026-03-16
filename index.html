@@ -1,292 +1,180 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Dynamic Event Registration</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #4e73df, #1cc88a);
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            width: 80%;
-            margin: 30px auto;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-        }
-
-        h1, h2 {
-            text-align: center;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #4e73df;
-            color: white;
-        }
-
-        fieldset {
-            border: 2px solid #4e73df;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            padding: 15px;
-        }
-
-        legend {
-            font-weight: bold;
-            color: #4e73df;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        /* Correct radio & checkbox styling */
-        input[type="radio"],
-        input[type="checkbox"] {
-            width: auto;
-            margin-right: 5px;
-        }
-
-        button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 15px;
-        }
-
-        .submit-btn {
-            background-color: #1cc88a;
-            color: white;
-        }
-
-        .submit-btn:hover {
-            background-color: #17a673;
-        }
-
-        .reset-btn {
-            background-color: #e74a3b;
-            color: white;
-        }
-
-        .reset-btn:hover {
-            background-color: #c0392b;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #4e73df;
-            color: white;
-            border-radius: 5px;
-        }
-
-        /* Fixed flex typo */
-        .container2 {
-            display: flex;
-            flex-direction: column;
-        }
-
-    </style>
+<title>Event Registration Page</title>
 </head>
 
 <body>
 
-<div class="container">
+<!-- Event Title -->
+<h1>College Tech Workshop 2026</h1>
 
-<h1>Tech Innovators Workshop 2026</h1>
-
-<p style="text-align:center;">
-<b>
-Welcome to the Tech Innovators Workshop 2026.
-This event focuses on AI, Cybersecurity, and Web Development.
-</b>
+<!-- Event Description -->
+<p>
+This event helps students learn new technologies such as Web Development,
+Cyber Security, and Artificial Intelligence through workshops and seminars.
+Students can register online using this form.
 </p>
+
+<hr>
+
+<!-- Event Information Section -->
 
 <h2>Event Information</h2>
 
-<table>
+<table border="1">
+
 <tr>
-    <th>Event Date</th>
-    <td>15 March 2026</td>
+<th>Event Date</th>
+<th>Time</th>
+<th>Venue</th>
+<th>Organizer</th>
 </tr>
+
 <tr>
-    <th>Time</th>
-    <td>10:00 AM – 4:00 PM</td>
+<td>20 April 2026</td>
+<td>10:00 AM</td>
+<td>SRM Arts and Science College</td>
+<td>Computer Science Department</td>
 </tr>
-<tr>
-    <th>Venue</th>
-    <td>SRM Arts and Science College Auditorium</td>
-</tr>
-<tr>
-    <th>Organizer</th>
-    <td>Department of Computer Science</td>
-</tr>
+
 </table>
 
 <hr>
 
+<!-- Registration Form -->
+
 <h2>Event Registration Form</h2>
 
-<form id="registrationForm">
+<form>
+
+<!-- Personal Information -->
 
 <fieldset>
+
 <legend>Personal Information</legend>
 
-Name:
-<input type="text" id="name" required>
+<label>Name</label><br>
+<input type="text"><br><br>
 
-Email:
-<input type="email" id="email" required>
+<label>Email</label><br>
+<input type="email"><br><br>
 
-Phone:
-<input type="tel" id="phone" required>
+<label>Phone Number</label><br>
+<input type="tel"><br><br>
 
-Date of Birth:
-<input type="date" required>
+<label>Date of Birth</label><br>
+<input type="date"><br><br>
 
-Gender:
-<input type="radio" name="gender" value="Male" required> Male
-<input type="radio" name="gender" value="Female"> Female
-<input type="radio" name="gender" value="Other"> Other
+<label>Gender</label><br>
+
+<input type="radio" name="gender"> Male<br>
+<input type="radio" name="gender"> Female<br>
+<input type="radio" name="gender"> Other<br><br>
 
 </fieldset>
 
+
+<!-- Event Selection -->
+
 <fieldset>
+
 <legend>Event Selection</legend>
 
-Select Event:
-<select id="event">
-<option>AI Workshop</option>
-<option>Cybersecurity Seminar</option>
-<option>Web Development Bootcamp</option>
+<label>Select Event</label><br>
+
+<select>
+
+<option>Web Development Workshop</option>
+<option>Cyber Security Seminar</option>
+<option>Artificial Intelligence Talk</option>
+
 </select>
 
-Mode:
-<input type="radio" name="mode" value="Online" required> Online
-<input type="radio" name="mode" value="Offline"> Offline
+<br><br>
+
+<label>Mode of Participation</label><br>
+
+<input type="radio" name="mode"> Online<br>
+<input type="radio" name="mode"> Offline<br>
 
 </fieldset>
+
+
+<!-- Additional Details -->
 
 <fieldset>
+
 <legend>Additional Details</legend>
 
-College / Company:
-<input type="text">
+<label>College / Company Name</label><br>
+<input type="text"><br><br>
 
-Upload ID:
-<input type="file">
+<label>Upload ID Proof</label><br>
+<input type="file"><br><br>
 
-Comments:
-<textarea rows="4"></textarea>
+<label>Comments / Expectations</label><br>
+<textarea rows="4" cols="40"></textarea>
 
 </fieldset>
 
-<input type="checkbox" id="confirm" required>
+<br>
+
+<!-- Declaration -->
+
+<input type="checkbox">
 I confirm that the above details are correct.
 
 <br><br>
 
-<button type="submit" class="submit-btn">Submit</button>
-<button type="reset" class="reset-btn">Reset</button>
+<!-- Form Buttons -->
+
+<input type="submit" value="Submit">
+
+<input type="reset" value="Reset">
 
 </form>
 
+<hr>
+
+<!-- Registered Participants Section -->
+
 <h2>Registered Participants</h2>
 
-<div class="container2">
+<table border="1">
 
-<table>
-<thead>
 <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Phone</th>
-    <th>Event</th>
-    <th>Mode</th>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Event</th>
+<th>Mode</th>
 </tr>
-</thead>
 
-<tbody id="participantsTable">
-</tbody>
+<tr>
+<td>Rahul Kumar</td>
+<td>rahul@email.com</td>
+<td>9876543210</td>
+<td>Web Development Workshop</td>
+<td>Offline</td>
+</tr>
 
 </table>
 
-</div>
+<hr>
+
+<!-- Footer -->
 
 <footer>
-Contact: techworkshop@gmail.com | Help Desk: +91 9876543210 <br>
-© 2026 Tech Innovators Workshop
+
+<p>Contact Email: helpdesk@collegeevent.com</p>
+
+<p>Help Desk Number: +91 9876543210</p>
+
+<p>© 2026 College Event</p>
+
 </footer>
-
-</div>
-
-<script>
-
-document.getElementById("registrationForm")
-.addEventListener("submit", function(e) {
-
-    e.preventDefault();
-
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
-    let event = document.getElementById("event").value;
-    let mode = document.querySelector('input[name="mode"]:checked').value;
-
-    let tableBody = document.getElementById("participantsTable");
-
-    let newRow = document.createElement("tr");
-
-    let cell1 = document.createElement("td");
-    let cell2 = document.createElement("td");
-    let cell3 = document.createElement("td");
-    let cell4 = document.createElement("td");
-    let cell5 = document.createElement("td");
-
-    cell1.textContent = name;
-    cell2.textContent = email;
-    cell3.textContent = phone;
-    cell4.textContent = event;
-    cell5.textContent = mode;
-
-    newRow.appendChild(cell1);
-    newRow.appendChild(cell2);
-    newRow.appendChild(cell3);
-    newRow.appendChild(cell4);
-    newRow.appendChild(cell5);
-
-    tableBody.appendChild(newRow);
-
-    alert("Registration Successful!");
-
-    document.getElementById("registrationForm").reset();
-
-});
-
-</script>
 
 </body>
 
