@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+<meta charset="UTF-8">
 <title>Event Registration Page</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<!-- Event Title -->
+<header>
 <h1>College Tech Workshop 2026</h1>
+<p>Learn modern web technologies and programming skills.</p>
+</header>
 
-<!-- Event Description -->
-<p>
-This event helps students learn new technologies such as Web Development,
-Cyber Security, and Artificial Intelligence through workshops and seminars.
-Students can register online using this form.
-</p>
-
-<hr>
-
-<!-- Event Information Section -->
+<section class="event-info">
 
 <h2>Event Information</h2>
 
-<table border="1">
+<table>
 
 <tr>
-<th>Event Date</th>
+<th>Date</th>
 <th>Time</th>
 <th>Venue</th>
 <th>Organizer</th>
@@ -41,108 +37,92 @@ Students can register online using this form.
 
 </table>
 
-<hr>
+</section>
 
-<!-- Registration Form -->
+
+<section class="form-section">
 
 <h2>Event Registration Form</h2>
 
-<form>
-
-<!-- Personal Information -->
+<form onsubmit="return validateForm()">
 
 <fieldset>
-
 <legend>Personal Information</legend>
 
-<label>Name</label><br>
-<input type="text"><br><br>
+<label>Name</label>
+<input type="text" required>
 
-<label>Email</label><br>
-<input type="email"><br><br>
+<label>Email</label>
+<input type="email" required>
 
-<label>Phone Number</label><br>
-<input type="tel"><br><br>
+<label>Phone Number</label>
+<input type="tel" required>
 
-<label>Date of Birth</label><br>
-<input type="date"><br><br>
+<label>Date of Birth</label>
+<input type="date">
 
-<label>Gender</label><br>
+<label>Gender</label>
 
-<input type="radio" name="gender"> Male<br>
-<input type="radio" name="gender"> Female<br>
-<input type="radio" name="gender"> Other<br><br>
+<input type="radio" name="gender"> Male
+<input type="radio" name="gender"> Female
+<input type="radio" name="gender"> Other
 
 </fieldset>
 
 
-<!-- Event Selection -->
-
 <fieldset>
-
 <legend>Event Selection</legend>
 
-<label>Select Event</label><br>
+<label>Select Event</label>
 
 <select>
-
 <option>Web Development Workshop</option>
 <option>Cyber Security Seminar</option>
 <option>Artificial Intelligence Talk</option>
-
 </select>
 
-<br><br>
+<label>Mode of Participation</label>
 
-<label>Mode of Participation</label><br>
-
-<input type="radio" name="mode"> Online<br>
-<input type="radio" name="mode"> Offline<br>
+<input type="radio" name="mode"> Online
+<input type="radio" name="mode"> Offline
 
 </fieldset>
 
-
-<!-- Additional Details -->
 
 <fieldset>
-
 <legend>Additional Details</legend>
 
-<label>College / Company Name</label><br>
-<input type="text"><br><br>
+<label>College / Company Name</label>
+<input type="text">
 
-<label>Upload ID Proof</label><br>
-<input type="file"><br><br>
+<label>Upload ID Proof</label>
+<input type="file">
 
-<label>Comments / Expectations</label><br>
-<textarea rows="4" cols="40"></textarea>
+<label>Comments / Expectations</label>
+<textarea rows="4"></textarea>
 
 </fieldset>
 
-<br>
-
-<!-- Declaration -->
-
-<input type="checkbox">
+<label>
+<input type="checkbox" id="confirm">
 I confirm that the above details are correct.
+</label>
 
 <br><br>
 
-<!-- Form Buttons -->
-
-<input type="submit" value="Submit">
-
-<input type="reset" value="Reset">
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
 
 </form>
 
-<hr>
+</section>
 
-<!-- Registered Participants Section -->
+
+<section>
 
 <h2>Registered Participants</h2>
 
-<table border="1">
+<table>
 
 <tr>
 <th>Name</th>
@@ -162,20 +142,17 @@ I confirm that the above details are correct.
 
 </table>
 
-<hr>
-
-<!-- Footer -->
+</section>
 
 <footer>
 
-<p>Contact Email: helpdesk@collegeevent.com</p>
-
-<p>Help Desk Number: +91 9876543210</p>
-
-<p>© 2026 College Event</p>
+<p>Contact Email: events@college.com</p>
+<p>Help Desk: +91 9876543210</p>
+<p>© 2026 Department of Computer Science</p>
 
 </footer>
 
-</body>
+<script src="script.js"></script>
 
+</body>
 </html>
